@@ -1,0 +1,14 @@
+<ruleset name="Default ruleset used by the CodeClimate Engine for Salesforce.com Apex"
+	     xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+	<description>
+		Default ruleset used by the Code Climate Engine for Salesforce.com Apex
+	</description>
+
+  <rule ref="rulesets/apex/basic.xml"/>
+  <rule ref="rulesets/apex/codesize.xml"/>
+  <rule ref="rulesets/apex/design.xml"/>
+  <rule ref="rulesets/apex/naming.xml"/>
+  
+</ruleset>
