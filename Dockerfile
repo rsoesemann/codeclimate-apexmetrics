@@ -13,4 +13,5 @@ COPY . /usr/src/app
 VOLUME /code
 WORKDIR /code
 
-CMD ["/usr/src/app/bin/pmd.java"]
+CMD javac Apex.java
+CMD java Apex
