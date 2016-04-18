@@ -11,18 +11,13 @@ RUN apt-get update && \
     apt-get install -y oracle-java8-installer && \
     apt-get clean
 
-WORKDIR /usr/src/app/
-
-COPY engine.json /
-COPY package.json /usr/src/app/
-
-RUN useradd -u 9000 -r -s /bin/false app
-USER app
-
-COPY . /usr/src/app
+RUN groupadd app -g 9000
+RUN useradd -g 9000 -u 9000 -r -s /bin/false app 
 
 VOLUME /code
 WORKDIR /code
 
-RUN javac Apex.java
-CMD java Apex
+COPY . /usr/src/app
+
+RUN ["javac /usr/src/app/bin/Apex.java"]
+CMD ["java /usr/src/app/bin/Apex"]
