@@ -24,5 +24,5 @@ COPY . /usr/src/app
 VOLUME /code
 WORKDIR /code
 
-CMD javac Apex.java
+RUN javac Apex.java
 CMD java Apex
