@@ -39,7 +39,7 @@ public class Pmd {
 			}
 			 
 			while ((s = stdError.readLine()) != null) {
-			    System.out.println(s);
+			    System.err.println(s);
 			}
 			 
 			System.exit(0);
