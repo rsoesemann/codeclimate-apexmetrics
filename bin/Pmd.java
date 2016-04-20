@@ -2,9 +2,9 @@ import java.io.*;
 import java.util.*;
 import java.text.MessageFormat;
 
-public class Apex {
+public class Pmd {
 	
-	private static final String SCRIPT_DIRECTORY = Apex.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+	private static final String SCRIPT_DIRECTORY = Pmd.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 	private static final String DEFAULT_RULESET_LOCATION = SCRIPT_DIRECTORY + "apex-ruleset.xml";
 	private static final String CUSTOM_RULESET_LOCATION = "/apex-ruleset.xml";
 	private static final String CODE_DIRECTORY = "/code";
