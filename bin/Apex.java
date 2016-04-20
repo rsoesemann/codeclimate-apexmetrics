@@ -1,23 +1,33 @@
 import java.io.*;
 import java.util.*;
+import java.text.MessageFormat;
 
 public class Apex {
+	
+	private static final String SCRIPT_DIRECTORY = Apex.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+	private static final String DEFAULT_RULESET_LOCATION = SCRIPT_DIRECTORY + "apex-ruleset.xml";
+	private static final String CUSTOM_RULESET_LOCATION = "/apex-ruleset.xml";
+	private static final String CODE_DIRECTORY = "/code";
+	private static final MessageFormat COMMAND = new MessageFormat("{0}pmd/bin/run.sh pmd -d {1} -f codeclimate -R {2}");
+	
+	
 	public static void main(String[] args) {
-		String scriptDir = Apex.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-		String codeDir = "/Users/drenz/git/pmd/pmd-apex/src/test/resources";
-		String rules = "apex-ruleset";
+		String ruleset;
 		
-		executeCommand(scriptDir + "pmd/bin/run.sh pmd -d " + codeDir + " -f codeclimate -R " + rules);
-
+		if(new File(CUSTOM_RULESET_LOCATION).exists()) {
+			ruleset = CUSTOM_RULESET_LOCATION;
+		} else {
+			ruleset = DEFAULT_RULESET_LOCATION;
+		}
+		
+		executeCommand(COMMAND.format(new Object[] { SCRIPT_DIRECTORY, CODE_DIRECTORY, ruleset } ));
 	}
 	
 	private static void executeCommand(String command) {
-
 		StringBuffer output = new StringBuffer();
 		String s = null;
 		
 		try {
-            
 			Process p = Runtime.getRuntime().exec(command);
 			p.waitFor();
 			             
