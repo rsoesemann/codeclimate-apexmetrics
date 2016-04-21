@@ -1,16 +1,14 @@
-FROM java:8
+FROM anapsix/alpine-java
 
 MAINTAINER Up2Go-DavidRenz
 
-RUN groupadd app -g 9000
-RUN useradd -g 9000 -u 9000 -r -s /bin/false app 
+RUN addgroup app -g 9000 && adduser -g 9000 -u 9000 -S -s /bin/false app 
 
 VOLUME /code
 WORKDIR /code
 
 COPY . /usr/src/app
 
-USER app
+User app
 
-RUN ["javac /usr/src/app/bin/Pmd.java"]
-CMD ["java /usr/src/app/bin/Pmd"]
+CMD ["java", "/usr/src/app/bin/Pmd"]
