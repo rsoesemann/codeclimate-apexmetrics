@@ -11,4 +11,5 @@ COPY . /usr/src/app
 
 User app
 
+RUN ["javac /usr/src/app/bin/Pmd.java"]
 CMD ["java", "/usr/src/app/bin/Pmd"]
