@@ -7,12 +7,14 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app
 
 RUN groupadd app -g 9000 && useradd -g 9000 -u 9000 -r -s /bin/false app 
-RUN chown -R app .
 
-USER app
+RUN javac /usr/src/app/Pmd.java
+
+RUN chown -R app /usr/src/app
 
 VOLUME /code
 WORKDIR /code
 
-RUN javac /usr/src/app/bin/Pmd.java -d /usr/src/app
+USER app
+
 CMD ["java", "/usr/src/app/Pmd"]
