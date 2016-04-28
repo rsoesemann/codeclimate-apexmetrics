@@ -20,7 +20,7 @@ public class Pmd {
 			ruleset = DEFAULT_RULESET_LOCATION;
 		}
 		
-		executeCommand(COMMAND.format(new Object[] { SCRIPT_DIRECTORY, CODE_DIRECTORY, ruleset } ));
+		executeCommand(COMMAND.format(new Object[] { SCRIPT_DIRECTORY, CODE_DIRECTORY, "apex-ruleset" } ));
 	}
 	
 	private static void executeCommand(String command) {
@@ -46,7 +46,7 @@ public class Pmd {
         }
         catch (Exception e) {
             e.printStackTrace();
-            System.exit(0);
+            System.exit(-1);
         }
 	}
 }

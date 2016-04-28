@@ -17,4 +17,4 @@ WORKDIR /code
 
 USER app
 
-CMD ["java", "-cp /usr/src/app/", "Pmd"]
+CMD java -cp /usr/src/app Pmd
