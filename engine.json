@@ -1,6 +1,6 @@
 {
 	"name": "codeclimate-apex",
-	"description": "Static code analysis tool for Salesforce.com Apex",
+	"description": "Static code analysis tool for Salesforce.com Apex based on PMD",
 	"maintainer": {
 		"name": "Up2go-DavidRenz",
 		"email": "david.renz@up2go.com"
