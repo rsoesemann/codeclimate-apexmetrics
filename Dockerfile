@@ -1,4 +1,4 @@
-FROM java:8-jre
+FROM anapsix/alpine-java
 
 MAINTAINER Up2Go-DavidRenz
 
@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-RUN groupadd app -g 9000 && useradd -g 9000 -u 9000 -r -s /bin/false app
+RUN addgroup app -g 9000 && adduser -g 9000 -u 9000 -S -s /bin/false app
 
 RUN chown -R app /usr/src/app
 
