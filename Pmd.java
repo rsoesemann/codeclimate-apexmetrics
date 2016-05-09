@@ -8,7 +8,7 @@ public class Pmd {
 	private static final String DEFAULT_RULESET_LOCATION = SCRIPT_DIRECTORY + "apex-ruleset.xml";
 	private static final String CUSTOM_RULESET_LOCATION = "/apex-ruleset.xml";
 	private static final String CODE_DIRECTORY = "/code";
-	private static final MessageFormat COMMAND = new MessageFormat("{0}lib/pmd/bin/run.sh pmd -d {1} -f codeclimate -R {2}");
+	private static final MessageFormat COMMAND = new MessageFormat("{0}lib/pmd/bin/run.sh pmd -d {1} -f codeclimate -R {2} -l apex -v 35");
 	
 	
 	public static void main(String[] args) {
