@@ -19,4 +19,4 @@ COPY . /usr/src/app
 
 USER app
 
-CMD ["/usr/src/app/bin/pmd.groovy", "--codeFolder=/code","--configFile=/config.json"]
+CMD ["/usr/src/app/pmd.groovy", "--codeFolder=/code","--configFile=/config.json"]

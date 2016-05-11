@@ -11,10 +11,11 @@ def includePaths = new JsonSlurper().parse(new File(appContext.configFile), "UTF
 def codeFolder = new File(appContext.codeFolder)
 
 def scriptDir = getClass().protectionDomain.codeSource.location.path.replace("/${this.class.name}.groovy","")
-def filesToAnalyse = new FileNameFinder().getFileNames(appContext.codeFolder, includePaths)
+def filesToAnalyse = new FileNameFinder().getFileNames(appContext.codeFolder, includePaths).toString()
+filesToAnalyse = filesToAnalyse.substring(1, filesToAnalyse.length()-1).replaceAll("\\s+","")
 
 def ruleset
-def defaultRulesetLocation = scriptDir + "apex-ruleset.xml"
+def defaultRulesetLocation = scriptDir + "/apex-ruleset.xml"
 def customRulesetLocation = "/apex-ruleset.xml"
 if ( new File(customRulesetLocation).exists() ) {
     ruleset = customRulesetLocation
@@ -25,14 +26,14 @@ if ( new File(customRulesetLocation).exists() ) {
 def sout = new StringBuffer()
 def serr = new StringBuffer()
 
-def pmdCommand = "${scriptDir}/pmd/bin/run.sh pmd -d ${filesToAnalyse} -f xml -R ${ruleset} -r ${outputFilePath} -l apex -v 35".execute()
+def pmdCommand = "${scriptDir}/lib/pmd/bin/run.sh pmd -d ${filesToAnalyse} -f codeclimate -R ${ruleset} -l apex -v 35".execute()
 pmdCommand.consumeProcessOutput(sout, serr)
 pmdCommand.waitFor()
 if (pmdCommand.exitValue() !=0 ) {
 	System.err << serr.toString()
 }
 
-TODO: Output
+println sout
 
 def setupContext(cmdArgs) {
 	def cli = new CliBuilder(usage:"${this.class.name}")
