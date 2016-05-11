@@ -34,9 +34,11 @@ process.consumeProcessOutput(sout, serr)
 process.waitFor()
 if (process.exitValue() !=0 ) {
 	System.err << serr.toString()
+	System.exit(-1)
 } 
 else {
 	System.out << sout.toString()
+	System.exit(0)
 }
 
 def setupContext(cmdArgs) {
