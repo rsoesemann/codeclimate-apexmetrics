@@ -1,21 +1,27 @@
 #!/usr/bin/env groovy
-import groovy.io.FileType
 import groovy.json.JsonSlurper
-import groovy.json.JsonOutput
 import groovy.util.FileNameFinder
-import groovy.util.XmlParser
 
 
 def appContext = setupContext(args)
 def includePaths = new JsonSlurper().parse(new File(appContext.configFile), "UTF-8").include_paths?.join(" ")
 def codeFolder = new File(appContext.codeFolder)
 
-def scriptDir = getClass().protectionDomain.codeSource.location.path.replace("/${this.class.name}.groovy","")
-def filesToAnalyse = new FileNameFinder().getFileNames(appContext.codeFolder, includePaths).toString()
+def filesToAnalyse = new FileNameFinder().getFileNames(appContext.codeFolder, includePaths)
+
+def i = filesToAnalyse.iterator()
+while(i.hasNext()) {
+    string = i.next()
+    if( !string.contains(".cls") && !string.contains(".trigger") ) {
+        i.remove()
+    }
+}
+
+filesToAnalyse = filesToAnalyse.toString()
 filesToAnalyse = filesToAnalyse.substring(1, filesToAnalyse.length()-1).replaceAll("\\s+","")
 
 def ruleset
-def defaultRulesetLocation = scriptDir + "/apex-ruleset.xml"
+def defaultRulesetLocation = "/usr/src/app/apex-ruleset.xml"
 def customRulesetLocation = "/apex-ruleset.xml"
 if ( new File(customRulesetLocation).exists() ) {
     ruleset = customRulesetLocation
@@ -24,22 +30,18 @@ else {
     ruleset = defaultRulesetLocation
 }
 
-def pmdCommand = "${scriptDir}/lib/pmd/bin/run.sh pmd -d ${filesToAnalyse} -f codeclimate -R ${ruleset} -l apex -v 35"
+def pmdCommand = "/usr/src/app/lib/pmd/bin/run.sh pmd -d ${filesToAnalyse} -f codeclimate -R ${ruleset} -l apex -v 35"
 
 def sout = new StringBuffer()
 def serr = new StringBuffer()
 
 def process = pmdCommand.execute()
 process.consumeProcessOutput(sout, serr)
-process.waitFor()
-if (process.exitValue() !=0 ) {
-	System.err << serr.toString()
-	System.exit(-1)
-} 
-else {
-	System.out << sout.toString()
-	System.exit(0)
-}
+process.waitForProcessOutput()
+
+System.out << sout.toString()
+System.exit(0)
+
 
 def setupContext(cmdArgs) {
 	def cli = new CliBuilder(usage:"${this.class.name}")
