@@ -1,4 +1,4 @@
-FROM java
+FROM java:8-jre
 
 MAINTAINER Up2Go-DavidRenz
 
@@ -12,9 +12,6 @@ ENV GROOVY_HOME /groovy
 ENV PATH $GROOVY_HOME/bin/:$PATH
 
 RUN groupadd app -g 9000 && useradd -g 9000 -u 9000 -r -s /bin/false app
-
-RUN apt-get remove -y curl wget bzr git mercurial openssh-client subversion bzip2 unzip xz-utils && \ 
-    apt-get autoremove -y 
 
 VOLUME /code
 WORKDIR /code
