@@ -19,6 +19,9 @@ while(i.hasNext()) {
 
 filesToAnalyse = filesToAnalyse.toString()
 filesToAnalyse = filesToAnalyse.substring(1, filesToAnalyse.length()-1).replaceAll("\\s+","")
+if (filesToAnalyse.isEmpty()) {
+    System.exit(0)
+}
 
 def ruleset
 def defaultRulesetLocation = "/usr/src/app/apex-ruleset.xml"
