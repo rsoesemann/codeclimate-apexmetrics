@@ -22,7 +22,7 @@ filesToAnalyse = filesToAnalyse.substring(1, filesToAnalyse.length()-1).replaceA
 
 def ruleset
 def defaultRulesetLocation = "/usr/src/app/apex-ruleset.xml"
-def customRulesetLocation = "/apex-ruleset.xml"
+def customRulesetLocation = "/code/apex-ruleset.xml"
 if ( new File(customRulesetLocation).exists() ) {
     ruleset = customRulesetLocation
 } 
