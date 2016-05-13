@@ -35,25 +35,29 @@ else {
 
 def pmdCommand = "/usr/src/app/lib/pmd/bin/run.sh pmd -d ${filesToAnalyse} -f codeclimate -R ${ruleset} -l apex -v 35 -failOnViolation false"
 
-def sout = new StringBuffer()
-def serr = new StringBuffer()
+ProcessBuilder builder = new ProcessBuilder( pmdCommand.split(' ') )
 
-def process = pmdCommand.execute()
-process.consumeProcessOutput(sout, serr)
-process.waitForProcessOutput()
+Process process = builder.start()
 
-if (process.exitValue() !=0 ) {
-    System.exit(-1)
+InputStream stdout = process.getInputStream ()
+BufferedReader reader = new BufferedReader (new InputStreamReader(stdout))
+
+while ((line = reader.readLine ()) != null) {
+   System.out.println ( line )
 }
 
-System.out << sout.toString()
+process.waitForProcessOutput()
+
+if ( process.exitValue() != 0 ) {
+    System.exit(-1)
+}
 
 System.exit(0)
 
 
 def setupContext(cmdArgs) {
-	def cli = new CliBuilder(usage:"${this.class.name}")
-	cli._(longOpt: "configFile", required: true, args: 1, "Path to config.json file")
-	cli._(longOpt: "codeFolder", required: true, args: 1, "Path to code folder")
-	cli.parse(cmdArgs)
+    def cli = new CliBuilder(usage:"${this.class.name}")
+    cli._(longOpt: "configFile", required: true, args: 1, "Path to config.json file")
+    cli._(longOpt: "codeFolder", required: true, args: 1, "Path to code folder")
+    cli.parse(cmdArgs)
 }
