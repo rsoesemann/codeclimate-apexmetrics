@@ -12,6 +12,7 @@ engines:
 
 If you want to exclude some files or directories from the analysis you can define them in your .codeclimate.yml.
 You can find more information about that in the official [documentation](https://docs.codeclimate.com/docs/excluding-files-and-folders).
+
 Example:
 
 ```yaml
