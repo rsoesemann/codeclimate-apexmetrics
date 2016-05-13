@@ -41,11 +41,13 @@ def serr = new StringBuffer()
 def process = pmdCommand.execute()
 process.consumeProcessOutput(sout, serr)
 process.waitForProcessOutput()
-if (analysis.exitValue() !=0 ) {
+
+if (process.exitValue() !=0 ) {
     System.exit(-1)
 }
 
 System.out << sout.toString()
+
 System.exit(0)
 
 
