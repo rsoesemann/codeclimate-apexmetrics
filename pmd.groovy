@@ -12,7 +12,7 @@ def filesToAnalyse = new FileNameFinder().getFileNames(appContext.codeFolder, in
 def i = filesToAnalyse.iterator()
 while(i.hasNext()) {
     string = i.next()
-    if( !string.contains(".cls") && !string.contains(".trigger") ) {
+    if( !string.endsWith(".cls") && !string.endsWith(".trigger") ) {
         i.remove()
     }
 }
@@ -33,7 +33,7 @@ else {
     ruleset = defaultRulesetLocation
 }
 
-def pmdCommand = "/usr/src/app/lib/pmd/bin/run.sh pmd -d ${filesToAnalyse} -f codeclimate -R ${ruleset} -l apex -v 35"
+def pmdCommand = "/usr/src/app/lib/pmd/bin/run.sh pmd -d ${filesToAnalyse} -f codeclimate -R ${ruleset} -l apex -v 35 -failOnViolation false"
 
 def sout = new StringBuffer()
 def serr = new StringBuffer()
@@ -41,6 +41,9 @@ def serr = new StringBuffer()
 def process = pmdCommand.execute()
 process.consumeProcessOutput(sout, serr)
 process.waitForProcessOutput()
+if (analysis.exitValue() !=0 ) {
+    System.exit(-1)
+}
 
 System.out << sout.toString()
 System.exit(0)
