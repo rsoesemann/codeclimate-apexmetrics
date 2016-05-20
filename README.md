@@ -1,5 +1,7 @@
-# codeclimate-apex
-This is a Code Climate Engine for the static code analysis tool [PMD] (https://pmd.github.io/) for [Salesforce.com Apex] (https://developer.salesforce.com/page/Apex).
+# Code Climate Salesforce.com Apex Engine
+This is a Code Climate Engine for the static code analysis tool [PMD] (https://pmd.github.io/) to analyse [Salesforce.com Apex] (https://developer.salesforce.com/page/Apex) source code.
+
+You can run it on your command line using the [Code Climate CLI] (https://github.com/codeclimate/codeclimate#code-climate-cli) or on the cloud analysis platform [Code Climate] (https://codeclimate.com/).
 
 ### Engine configuration (.codeclimate.yml)
 If you want to use this Code Climate Apex engine you have to add this .codeclimate.yml to the root directory of your repository.
