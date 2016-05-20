@@ -38,4 +38,4 @@ The engine will use the default [apex-ruleset.xml](https://github.com/Up2Go/code
 If you want to improve or adapt the engine just fork it. Pull requests are welcome.
 [Here] (http://blog.codeclimate.com/blog/2015/07/07/build-your-own-codeclimate-engine/) you can find some information about building you own Code Climate Engine.
 
-The engine is just a wrapper for Apex module of the static code analysis tool PMD. You can find more information about it on our [PMD GitHub repository] (https://github.com/Up2Go/pmd).
+The engine is just a wrapper for Apex module of the static code analysis tool PMD. You can find more information about it on our [PMD GitHub repository] (https://github.com/Up2Go/pmd/blob/master/README.md#pmd---salesforcecom-apex).
