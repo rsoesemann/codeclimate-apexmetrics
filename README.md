@@ -1,7 +1,7 @@
 # codeclimate-apex
-Code Climate Engine for Salesforce.com Apex (based on PMD)
+This is a Code Climate Engine for the static code analysis tool [PMD] (https://pmd.github.io/) for [Salesforce.com Apex] (https://developer.salesforce.com/page/Apex).
 
-###engine configuration (.codeclimate.yml)
+### Engine configuration (.codeclimate.yml)
 If you want to use this Code Climate Apex engine you have to add this .codeclimate.yml to the root directory of your repository.
 
 ```yaml
@@ -23,6 +23,6 @@ exclude_paths:
   - ".codeclimate.yml"
 ```
 
-###rule configuration (apex-ruleset.xml)
+### Rule configuration (apex-ruleset.xml)
 The engine will use the default [apex-ruleset.xml](https://github.com/Up2Go/codeclimate-apex/blob/master/bin/apex-ruleset.xml), if you want to customize it for your own needs you can adept the file and add it to the root directory of your repository. 
 
