@@ -30,7 +30,7 @@ exclude_paths:
 
 
 ### Rule configuration (apex-ruleset.xml)
-The engine will use the default [apex-ruleset.xml](https://github.com/Up2Go/codeclimate-apex/blob/master/bin/apex-ruleset.xml), if you want to customize it for your own needs you can adept the file and add it to the root directory of your repository. 
+The engine will use the default [apex-ruleset.xml](https://github.com/Up2Go/codeclimate-apex/blob/master/apex-ruleset.xml), if you want to customize it for your own needs you can adept the file and add it to the root directory of your repository. 
 
 
 
