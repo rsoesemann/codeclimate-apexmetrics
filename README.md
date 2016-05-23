@@ -12,6 +12,10 @@ If you want to use this Code Climate Apex engine you have to add this .codeclima
 engines:
   apex:
     enabled: true
+ratings:
+  paths:
+  - "**.cls"
+  - "**.trigger"
 ```
 
 If you want to exclude some files or directories from the analysis you can define them in your .codeclimate.yml.
