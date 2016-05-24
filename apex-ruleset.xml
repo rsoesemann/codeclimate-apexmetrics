@@ -149,6 +149,13 @@
 	
 	<rule ref="rulesets/apex/style.xml/AvoidGlobalModifier" message="Avoid using global modifier">
 		<priority>3</priority>
+
+		<properties>	
+	       	<!-- relevant for Code Climate output only -->
+	       	<property name="cc_categories" value="Style"/>
+	       	<property name="cc_remediation_points_multiplier" value="100"/>
+        	<property name="cc_block_highlighting" value="false"/>
+       	</properties>
 	</rule>
 	
 	<rule ref="rulesets/apex/style.xml/ClassNamingConventions" message="Class names should begin with an uppercase character">
