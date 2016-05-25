@@ -1,6 +1,6 @@
 ## ApexMetrics - Code Climate engine for Apex
 
-ApexMetrics is a [Code Climate engine](https://codeclimate.com/engines) for the programming language [Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/) of the [Force.com cloud platform by Salesforce.com](http://www.salesforce.com/platform/products/force).
+ApexMetrics is a [Code Climate engine](https://codeclimate.com/engines) for the programming language [Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/) of the [Salesforce.com cloud platform](http://www.salesforce.com/platform/products/force).
 
 If you [connect your Github repositories to Code Climate](https://docs.codeclimate.com/docs/importing-repositories) and enable the Engine [static code analysis](http://stackoverflow.com/questions/49716/what-is-static-code-analysis) is performed on every commit or pull request. The resulting continuous metrics will tell you where code improved or degraded over time and which [hot spots need refactoring](http://blog.xebia.com/static-code-analysis-is-just-tip-of-the-iceberg/).
 
