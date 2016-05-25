@@ -4,6 +4,7 @@ A Code Climate Engine for the static code analysis tool [PMD] (https://pmd.githu
 
 You can run it on your command line using the [Code Climate CLI] (https://github.com/codeclimate/codeclimate#code-climate-cli) or on the cloud analysis platform [Code Climate] (https://codeclimate.com/).
 
+**TODO** Background motivation, abstract of development, overview of tools and visio and puropose
 
 
 ### Enable the Engine
@@ -69,7 +70,6 @@ You can configurate the properties of the rules according to your needs.
 
 
 ### How to contribute
-If you want to improve or adapt the engine just fork it. Pull requests are welcome.
-[Here] (http://blog.codeclimate.com/blog/2015/07/07/build-your-own-codeclimate-engine/) you can find some information about building you own Code Climate Engine.
 
-The engine is just a wrapper for Apex module of the static code analysis tool PMD. You can find more information about it on our [PMD GitHub repository] (https://github.com/Up2Go/pmd/blob/master/README.md#pmd---salesforcecom-apex).
+**TODO** 2 reasons for exting engine. a) Update with new PMD version. Link to PMD Contribute that describes how to contribute to PMD
+b) add part to engine (e.g. Unused code using tooling ap) - Step by Step guide with Screenshots that show how to build and test CLI and engine.
