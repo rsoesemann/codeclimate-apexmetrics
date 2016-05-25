@@ -60,7 +60,7 @@ Example:
 ```
 
 You can configurate the properties of the rules according to your needs.
-* **minimum**: The threshold value of the rule
+* **minimum/reportLevel/maxfields/problemDepth**: The threshold value of the rule
 * **cc_categories**: The Code Climate specific [categorization](https://github.com/codeclimate/spec/blob/master/SPEC.md#categories)
 * **cc_remediation_points_multiplier**: The multiplier of the Code Climate specific [Remediation Points](https://github.com/codeclimate/spec/blob/master/SPEC.md#remediation-points) (default multiplicand is 50.000)
 * **cc_block_highlighting**: Defines if the hole related block or just the first line of the issue should be highlighted at the Code Climate Platform. By default the block highlighting is disabled for reasons of clarity.
