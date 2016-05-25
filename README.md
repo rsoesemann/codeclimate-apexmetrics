@@ -1,4 +1,4 @@
-## ApexMetrix - Code Climate Engine for Salesforce.com Apex
+## ApexMetrics - Code Climate Engine for Salesforce.com Apex
 
 **TODO** Background motivation, abstract of development, overview of tools and visio and puropose
 
@@ -8,7 +8,7 @@ To use this Code Climate Apex engine you have to add this .codeclimate.yml to th
 
 ```yaml
 engines:
-  apex:
+  apexmetrics:
     enabled: true
 ratings:
   paths:
@@ -28,7 +28,7 @@ Example:
 
 ```yaml
 engines:
-  apex:
+  apexmetrics:
     enabled: true
 ratings:
   paths:
