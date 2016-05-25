@@ -22,7 +22,7 @@ ratings:
 
 For more details about Code Climate configuration go to [docs.codeclimate.com](https://docs.codeclimate.com/docs/configuring-your-code-climate-analysis).
 
-#### Exclude files and paths (optional)
+##### Exclude files and paths (optional)
 To exclude single files or folders from the analysis add a `exclude_paths` section to the file like in this minimal example:
 
 ```yaml
@@ -38,12 +38,12 @@ exclude_paths:
   - "**.xml"
 ```
 
-We recommend you to adapt a copy of this `[.codeclimate.yml](https://github.com/Up2Go/codeclimate-apex/blob/master/resources/.codeclimate.yml)` which already excludes most of the irrelevant Salesforce.com files and folders.
+We recommend you to adapt a copy of this [.codeclimate.yml](https://github.com/Up2Go/codeclimate-apex/blob/master/resources/.codeclimate.yml) which already excludes most of the irrelevant Salesforce.com files and folders.
 
 For more details about how to exclude files and folders go to [docs.codeclimate.com](https://docs.codeclimate.com/docs/excluding-files-and-folders).
 
 
-#### PMD Rule customization (optional)
+##### PMD Rule customization (optional)
 
 The static code analysis performed by this engine uses [an Apex port](https://github.com/pmd/pmd/tree/master/pmd-apex) of the [famous Java tool PMD](https://pmd.github.io/). PMD is very flexible and can be [configured using a so called ruleset xml file](http://pmd.sourceforge.net/pmd-4.3.0/howtomakearuleset.html). You can include or exclude certain rules and customize rule-specific parameters to influence if or when violations are detected.
 
@@ -71,5 +71,22 @@ All properties starting with `cc_` are Code Climate specific and define how the 
 
 ### How to contribute
 
-**TODO** 2 reasons for exting engine. a) Update with new PMD version. Link to PMD Contribute that describes how to contribute to PMD
-b) add part to engine (e.g. Unused code using tooling ap) - Step by Step guide with Screenshots that show how to build and test CLI and engine.
+There is a lot of room for improvement or extension. Depending on what you want to do you eighter need to fork, extend and pull request this repository or the PMD repository.
+
+##### Add or improve existing PMD rules
+
+If you want to add rules that work similarly to the ones we already have you will have to extend PMD itsself. Check the PMD README.md to learn how to contribute. 
+
+To get a new version of PMD into this engine this is what you need to do.
+
+TODO
+
+##### Upgrade PMD version used by the engine 
+
+Contributions made to PMD will not be automatically used by the Code Climate engine. You have to replace the current build of PMD in the engine with new one. Those are the steps you need to do:
+
+TODO
+
+##### Add new engine component
+
+Beside extending the underlying PMD framework people could also add totally new mechanisms to evaluate code. Code would then not only run through PMD but also through other internal components. Just imagine using the Tooling Api and then reporting back on usused code across class boundaries as [implemented by Salesforce.com MVP Andrew Fawcett](https://andyinthecloud.com/2013/02/02/spring-cleaning-apex-code-with-the-tooling-api/).
