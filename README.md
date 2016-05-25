@@ -23,7 +23,7 @@ ratings:
 For more details about Code Climate configuration go to [docs.codeclimate.com](https://docs.codeclimate.com/docs/configuring-your-code-climate-analysis).
 
 #### Exclude files and paths (optional)
-To exclude single files or folders from the analysis add a 'exclude_paths' section to the file like in this minimal example:
+To exclude single files or folders from the analysis add a `exclude_paths` section to the file like in this minimal example:
 
 ```yaml
 engines:
@@ -38,7 +38,7 @@ exclude_paths:
   - "**.xml"
 ```
 
-We recommend you to adapt a copy of this [.codeclimate.yml](https://github.com/Up2Go/codeclimate-apex/blob/master/resources/.codeclimate.yml) which already excludes most of the irrelevant Salesforce.com files and folders.
+We recommend you to adapt a copy of this `[.codeclimate.yml](https://github.com/Up2Go/codeclimate-apex/blob/master/resources/.codeclimate.yml)` which already excludes most of the irrelevant Salesforce.com files and folders.
 
 For more details about how to exclude files and folders go to [docs.codeclimate.com](https://docs.codeclimate.com/docs/excluding-files-and-folders).
 
@@ -62,7 +62,7 @@ By default or engine uses this [apex-ruleset.xml](https://github.com/Up2Go/codec
 </rule>
 ```
 
-All properties starting with 'cc_' are Code Climate specific and define how the results are displayed and how grade and ratings are calculated.
+All properties starting with `cc_` are Code Climate specific and define how the results are displayed and how grade and ratings are calculated.
 
 * **cc_categories**: The Code Climate specific [categorization]. Might differ from PMD (https://github.com/codeclimate/spec/blob/master/SPEC.md#categories)
 * **cc_remediation_points_multiplier**: Multiplication factor for the Code Climate [Remediation Point](https://github.com/codeclimate/spec/blob/master/SPEC.md#remediation-points) default of 50.000)
