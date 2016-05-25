@@ -24,7 +24,7 @@ ratings:
 If you want to exclude some files or directories from the analysis you can define them in your .codeclimate.yml.
 You can find more information about that in the official [documentation](https://docs.codeclimate.com/docs/excluding-files-and-folders).
 
-We recommend you to adapt our [.codeclimate.yml](https://github.com/Up2Go/codeclimate-apex/blob/master/resources/.codeclimate.yml), which is already excluding most of the Salesforce.com irrelevant files.
+We recommend you to adapt our [.codeclimate.yml](https://github.com/Up2Go/codeclimate-apex/blob/master/resources/.codeclimate.yml), which is already excluding most of the irrelevant Salesforce.com files.
 
 Example:
 
