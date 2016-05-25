@@ -14,8 +14,8 @@ engines:
     enabled: true
 ratings:
   paths:
-  - "**.cls"
-  - "**.trigger"
+    - "**.cls"
+    - "**.trigger"
 ```
 
 
@@ -32,6 +32,10 @@ Example:
 engines:
   apex:
     enabled: true
+ratings:
+  paths:
+    - "**.cls"
+    - "**.trigger"
 exclude_paths:
   - ".codeclimate.yml"
 ```
