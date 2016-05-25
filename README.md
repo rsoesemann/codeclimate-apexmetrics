@@ -1,4 +1,5 @@
-## ApexMetrics - Code Climate Engine for Salesforce.com Apex
+# ApexMetrics
+## Code Climate Engine for Salesforce.com Apex
 A Code Climate Engine for the static code analysis tool [PMD] (https://pmd.github.io/) to analyse [Salesforce.com Apex] (https://developer.salesforce.com/page/Apex) source code.
 
 You can run it on your command line using the [Code Climate CLI] (https://github.com/codeclimate/codeclimate#code-climate-cli) or on the cloud analysis platform [Code Climate] (https://codeclimate.com/).
