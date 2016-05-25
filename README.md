@@ -1,8 +1,4 @@
-# ApexMetrics
-## Code Climate Engine for Salesforce.com Apex
-A Code Climate Engine for the static code analysis tool [PMD] (https://pmd.github.io/) to analyse [Salesforce.com Apex] (https://developer.salesforce.com/page/Apex) source code.
-
-You can run it on your command line using the [Code Climate CLI] (https://github.com/codeclimate/codeclimate#code-climate-cli) or on the cloud analysis platform [Code Climate] (https://codeclimate.com/).
+## ApexMetrix - Code Climate Engine for Salesforce.com Apex
 
 **TODO** Background motivation, abstract of development, overview of tools and visio and puropose
 
@@ -66,7 +62,6 @@ You can configurate the properties of the rules according to your needs.
 * **cc_categories**: The Code Climate specific [categorization](https://github.com/codeclimate/spec/blob/master/SPEC.md#categories)
 * **cc_remediation_points_multiplier**: The multiplier of the Code Climate specific [Remediation Points](https://github.com/codeclimate/spec/blob/master/SPEC.md#remediation-points) (default multiplicand is 50.000)
 * **cc_block_highlighting**: Defines if the hole related block or just the first line of the issue should be highlighted at the Code Climate Platform. By default the block highlighting is disabled for reasons of clarity.
-
 
 
 ### How to contribute
