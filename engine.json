@@ -1,5 +1,5 @@
 {
-	"name": "codeclimate-apex",
+	"name": "codeclimate-apexmetrics",
 	"description": "Static code analysis tool for Salesforce.com Apex based on PMD",
 	"maintainer": {
 		"name": "Up2go-DavidRenz",
