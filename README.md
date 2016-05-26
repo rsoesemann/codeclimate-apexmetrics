@@ -64,8 +64,8 @@ By default or engine uses this [apex-ruleset.xml](https://github.com/Up2Go/codec
 
 All properties starting with `cc_` are Code Climate specific and define how the results are displayed and how grade and ratings are calculated.
 
-* **cc_categories**: The Code Climate specific [categorization]. Might differ from PMD (https://github.com/codeclimate/spec/blob/master/SPEC.md#categories)
-* **cc_remediation_points_multiplier**: Multiplication factor for the Code Climate [Remediation Point](https://github.com/codeclimate/spec/blob/master/SPEC.md#remediation-points) default of 50.000)
+* **cc_categories**: The Code Climate specific [categorization](https://github.com/codeclimate/spec/blob/master/SPEC.md#categories). Might differ from PMD.
+* **cc_remediation_points_multiplier**: Multiplication factor for the Code Climate [Remediation Point](https://github.com/codeclimate/spec/blob/master/SPEC.md#remediation-points) (default value is 50.000)
 * **cc_block_highlighting**: Defaults to 'false'. Only the first line of a problematic block is highlighted in the UI. If set to 'true' the whole block is highlighted which currently looks ugly.
 
 
