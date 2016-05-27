@@ -1,4 +1,4 @@
-## ApexMetrics - Code Climate engine for Apex
+## ApexMetrics - Code Climate engine for Salesforce.com Apex
 
 <img src="https://github.com/Up2Go/codeclimate-apexmetrics/blob/master/resources/ApexMetricsBanner.png">
 
