@@ -1,6 +1,6 @@
 ## ApexMetrics - Code Climate engine for Salesforce.com Apex
 
-<img src="https://github.com/Up2Go/codeclimate-apexmetrics/blob/master/resources/ApexMetricsBanner.png">
+<img src="https://github.com/Up2Go/codeclimate-apexmetrics/blob/master/resources/ApexMetricsLogo.png" width="150" align="left">
 
 ApexMetrics is a [Code Climate engine](https://codeclimate.com/engines) for the programming language [Apex](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/) of the [Salesforce.com cloud platform](http://www.salesforce.com/platform/products/force).
 
