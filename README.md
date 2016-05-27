@@ -46,7 +46,9 @@ For more details about how to exclude files and folders go to [docs.codeclimate.
 
 ##### PMD Rule customization (optional)
 
-The static code analysis performed by this engine uses [an Apex port](https://github.com/pmd/pmd/tree/master/pmd-apex) of the [famous Java tool PMD](https://pmd.github.io/). PMD is very flexible and can be [configured using a so called ruleset xml file](http://pmd.sourceforge.net/pmd-4.3.0/howtomakearuleset.html). You can include or exclude certain rules and customize rule-specific parameters to influence if or when violations are detected.
+Not all checks make sense under all circumstances so configurability is crucial when it comes to Code metrix. By adjusting your `.codeclimate.yml` you can eighter disable certain checks [for a single issue](https://docs.codeclimate.com/docs/marking-false-positives) or [for your whole repo](https://docs.codeclimate.com/docs/disabling-individual-checks).
+
+But that's not enough. One key benefit of Code Climate is grading. Grading not only takes the amount of issues into a account but also how severe issues are to fix. To customize if and when code is marked as issue you need to go "one level deeper". The static code analysis performed by this engine uses [an Apex port](https://github.com/pmd/pmd/tree/master/pmd-apex) of the [famous Java tool PMD](https://pmd.github.io/). PMD is very flexible and can be [configured using a so called ruleset xml file](http://pmd.sourceforge.net/pmd-4.3.0/howtomakearuleset.html). 
 
 By default or engine uses this [apex-ruleset.xml](https://github.com/Up2Go/codeclimate-apex/blob/master/apex-ruleset.xml). It enables all rules and runs them with values we came up with as good defaults. Just add a copy of that file to the root directory of your repository and adapt it to your needs.
 
@@ -54,19 +56,25 @@ By default or engine uses this [apex-ruleset.xml](https://github.com/Up2Go/codec
 <rule ref="rulesets/apex/complexity.xml/ExcessiveClassLength" message="Avoid really long classes (lines of code)">
   <priority>3</priority>
   <properties>
+    <!-- Rule specific property defining, when a class is marked as too long -->
     <property name="minimum" value="1000"/>
 
-    <property name="cc_categories" value="Complexity"/>
+    <!-- Code Climate specific properties -->
     <property name="cc_remediation_points_multiplier" value="150"/>
+    <property name="cc_categories" value="Complexity"/>
     <property name="cc_block_highlighting" value="false"/>
   </properties>	
 </rule>
 ```
 
-All properties starting with `cc_` are Code Climate specific and define how the results are displayed and how grade and ratings are calculated.
+Some rules have parameters which define if and when code is marked as issue. To learn how such parameters influence a check go to the readup section of an issue which describs 
 
+<img width="500" src="https://cloud.githubusercontent.com/assets/8180281/15602542/20d04d74-23f6-11e6-845f-51e4b09d0a90.png"> 
+
+All properties starting with `cc_` are Code Climate specific and define how the results are displayed or how grades are calculated.
+
+* **cc_remediation_points_multiplier**: This is multiplication factor for the Code Climate Remediation Point default of 50.000. To understand the semantics and importance of Remediation point please check the [docs.codeclimate.com](https://github.com/codeclimate/spec/blob/master/SPEC.md#remediation-points).
 * **cc_categories**: The Code Climate specific [categorization](https://github.com/codeclimate/spec/blob/master/SPEC.md#categories). Might differ from PMD.
-* **cc_remediation_points_multiplier**: Multiplication factor for the Code Climate [Remediation Point](https://github.com/codeclimate/spec/blob/master/SPEC.md#remediation-points) (default value is 50.000)
 * **cc_block_highlighting**: Defaults to 'false'. Only the first line of a problematic block is highlighted in the UI. If set to 'true' the whole block is highlighted which currently looks ugly.
 
 
