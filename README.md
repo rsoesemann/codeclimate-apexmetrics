@@ -36,7 +36,7 @@ ratings:
     - "**.cls"
     - "**.trigger"
 exclude_paths:
-  - "/triggers"
+  - "/src/triggers"
   - "**.xml"
 ```
 
