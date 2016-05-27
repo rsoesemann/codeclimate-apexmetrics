@@ -81,22 +81,4 @@ All properties starting with `cc_` are Code Climate specific and define how the 
 
 ### How to contribute
 
-There is a lot of room for improvement or extension. Depending on what you want to do you eighter need to fork, extend and pull request this repository or the PMD repository.
-
-##### Add or improve existing PMD rules
-
-If you want to add rules that work similarly to the ones we already have you will have to extend PMD itsself. Check the PMD README.md to learn how to contribute. 
-
-To get a new version of PMD into this engine this is what you need to do.
-
-TODO
-
-##### Upgrade PMD version used by the engine 
-
-Contributions made to PMD will not be automatically used by the Code Climate engine. You have to replace the current build of PMD in the engine with new one. Those are the steps you need to do:
-
-TODO
-
-##### Add new engine component
-
-Beside extending the underlying PMD framework people could also add totally new mechanisms to evaluate code. Code would then not only run through PMD but also through other internal components. Just imagine using the Tooling Api and then reporting back on usused code across class boundaries as [implemented by Salesforce.com MVP Andrew Fawcett](https://andyinthecloud.com/2013/02/02/spring-cleaning-apex-code-with-the-tooling-api/).
+There is a lot of room for improvement or extension. Depending on what you want to do you eighter need to fork, extend and pull request this repository or the PMD repository. Please check the [Wiki](https://github.com/Up2Go/codeclimate-apexmetrics/wiki) to learn how to contribute. 
