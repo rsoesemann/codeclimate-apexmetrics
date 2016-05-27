@@ -5,7 +5,7 @@ ApexMetrics is a [Code Climate engine](https://codeclimate.com/engines) for the 
 
 If you [connect your Github repositories to Code Climate](https://docs.codeclimate.com/docs/importing-repositories) and enable the Engine [static code analysis](http://stackoverflow.com/questions/49716/what-is-static-code-analysis) is performed on every commit or pull request. The resulting continuous metrics will tell you where code improved or degraded over time and which [hot spots need refactoring](http://blog.xebia.com/static-code-analysis-is-just-tip-of-the-iceberg/).
 
-The engine and [all of](https://github.com/forcedotcom/idecore/tree/b5bf3a1cb6e8d94aaac10f375c771ec8eab821ba/com.salesforce.ide.apex.core/lib) [its "ingredients"](https://github.com/Up2Go/pmd) are open-source so everybody in the community can contribute improvements. The engine was built by a few engineers at [Up2Go](https://github.com/Up2Go) (including [great](https://github.com/Up2Go/pmd/pull/7) [support](https://github.com/forcedotcom/idecore/issues/167) [by others](https://github.com/sivakumar-kailasam/codeclimate-pmd)) who struggled with enforcing Clean Code into their daily work given [the lack of metrics tools in the Salesforce.com ecosystem](http://salesforce.stackexchange.com/questions/1697/apex-static-code-analysis). 
+The engine and [all of](https://github.com/forcedotcom/idecore/tree/b5bf3a1cb6e8d94aaac10f375c771ec8eab821ba/com.salesforce.ide.apex.core/lib) [its "ingredients"](https://github.com/Up2Go/pmd) are open-source so everybody in the community can contribute. The engine was built by a software engineers at [Up2Go](https://github.com/Up2Go) who struggled with enforcing Clean Code into their daily work given [the lack of metrics tools in the Salesforce.com ecosystem](http://salesforce.stackexchange.com/questions/1697/apex-static-code-analysis). Not to forget the [awesome support](https://github.com/adangel) [by](https://github.com/forcedotcom/idecore/issues/167) [many](https://github.com/mrb) [others](https://github.com/sivakumar-kailasam).
 
 ### Enable and configure the Engine
 
@@ -69,7 +69,7 @@ By default or engine uses this [apex-ruleset.xml](https://github.com/Up2Go/codec
 
 Some rules have parameters which define if and when code is marked as issue. To learn how such parameters influence a check go to the readup section of an issue which describs 
 
-<img width="500" src="https://cloud.githubusercontent.com/assets/8180281/15602542/20d04d74-23f6-11e6-845f-51e4b09d0a90.png"> 
+<img width="500" src="https://cloud.githubusercontent.com/assets/8180281/15602948/5ed00770-23f8-11e6-9932-97eb44b3f1a6.png">
 
 All properties starting with `cc_` are Code Climate specific and define how the results are displayed or how grades are calculated.
 
