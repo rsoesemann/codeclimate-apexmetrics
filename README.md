@@ -82,7 +82,3 @@ All properties starting with `cc_` are Code Climate specific and define how the 
 ### How to contribute
 
 There is a lot of room for improvement or extension. Depending on what you want to do you eighter need to fork, extend and pull request this repository or the PMD repository. Please check the [Wiki](https://github.com/Up2Go/codeclimate-apexmetrics/wiki#how-to-contribute) to learn how to contribute. 
-
-
-
-[![ApexMetrics](https://github.com/Up2Go/codeclimate-apexmetrics/blob/master/resources/ApexMetricsBanner.png)](https://github.com/Up2Go/codeclimate-apexmetrics)
