@@ -8,7 +8,12 @@ If you [connect your Github repositories to Code Climate](https://docs.codeclima
 
 The engine and [all of](https://github.com/forcedotcom/idecore/tree/b5bf3a1cb6e8d94aaac10f375c771ec8eab821ba/com.salesforce.ide.apex.core/lib) [its "ingredients"](https://github.com/Up2Go/pmd) are open-source so everybody in the community can contribute. The engine was built by a software engineers at [Up2Go](https://github.com/Up2Go) who struggled with enforcing Clean Code into their daily work given [the lack of metrics tools in the Salesforce.com ecosystem](http://salesforce.stackexchange.com/questions/1697/apex-static-code-analysis). Not to forget the [awesome support](https://github.com/adangel) [by](https://github.com/forcedotcom/idecore/issues/167) [many](https://github.com/mrb) [others](https://github.com/sivakumar-kailasam).
 
-### What issues are (currently) recognized?
+
+**[What we check](#rules) | [How to configure](#configuration) | [How to contribute](#contribute)**
+
+
+### <a name="rules">What issues are (currently) recognized?</a>
+
 
 We currently check Apex classes and triggers for the following issues. Those could be easily ported from [existing PMD Java rules ](http://pmd.sourceforge.net/snapshot/pmd-java/rules/) and fully applied to Apex. As this engine and its components are open-source everybody can contribute new or improved rules.
 
@@ -37,7 +42,7 @@ ExcessiveClassLength: Excessive class file lengths are usually indications that 
 
 
 
-### Enable and configure the Engine
+### <a name="configuration">Enable and configure the Engine</a>
 
 Code Climate will not run this engine on your code unless you have this minimal '.codeclimate.yml' (Note the leading dot) in the root directory of your repository. 
 
@@ -108,6 +113,6 @@ All properties starting with `cc_` are Code Climate specific and define how the 
 * **cc_block_highlighting**: Defaults to 'false'. Only the first line of a problematic block is highlighted in the UI. If set to 'true' the whole block is highlighted which currently looks ugly.
 
 
-### How to contribute
+### <a name="contribute">How to contribute</a>
 
 There is a lot of room for improvement or extension. Depending on what you want to do you eighter need to fork, extend and pull request this repository or the PMD repository. Please check the [Wiki](https://github.com/Up2Go/codeclimate-apexmetrics/wiki#how-to-contribute) to learn how to contribute. 
