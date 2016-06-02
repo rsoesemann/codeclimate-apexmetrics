@@ -15,32 +15,40 @@ The engine and [all of](https://github.com/forcedotcom/idecore/tree/b5bf3a1cb6e8
 ### <a name="rules">What issues are (currently) recognized?</a>
 
 
-We currently check Apex classes and triggers for the following issues. Those could be easily ported from [existing PMD Java rules ](http://pmd.sourceforge.net/snapshot/pmd-java/rules/) and fully applied to Apex. As this engine and its components are open-source everybody can contribute new or improved rules.
+We currently check Apex classes and triggers for the following issues. Those could be easily ported from [existing PMD Java rules](http://pmd.sourceforge.net/snapshot/pmd-java/rules/) and fully applied to Apex. As this engine and its components are open-source everybody can contribute new or improved rules.
 
-- **ExcessiveClassLength**: Long Class files are indications that the class may be trying to do too much. Try to break it down, and reduce the size to something manageable.
-
-- **ExcessiveMethodLength:** When methods are excessively long this usually indicates that the method is doing more than itsname/signature might suggest. They also become challenging for others to digest since excessive scrolling causes readers to lose focus.Try to reduce the method length by creating helper methods and removing any copy/pasted code.
+- **ExcessiveClassLength:** Long Class files are indications that the class may be trying to do too much. Try to break it down, and reduce the size to something manageable.
 
 - **ExcessiveParameterList:** Methods with numerous parameters are a challenge to maintain, especially if most of them share thesame datatype. These situations usually denote the need for new objects to wrap the numerous parameters.
 ExcessiveClassLength: Excessive class file lengths are usually indications that the class may be burdened with excessive responsibilities that could be provided by external classes or functions. In breaking these methodsapart the code becomes more managable and ripe for reuse.
 
+- **ExcessivePublicCount:** Classes with large numbers of public methods and attributes require disproportionate testing effortssince combinational side effects grow rapidly and increase risk. Refactoring these classes intosmaller ones not only increases testability and reliability but also allows new variations to bedeveloped easily.
+
 - **StdCyclomaticComplexity:** Complexity directly affects maintenance costs is determined by the number of decision points in a method plus one for the method entry. The decision points include ‘if’, ‘while’, ‘for’, and ‘case labels’ calls. Generally, numbers ranging from 1-4 denote low complexity, 5-7 denote moderate complexity, 8-10 denotehigh complexity, and 11+ is very high complexity.
 
-- **ExcessivePublicCount:** Classes with large numbers of public methods and attributes require disproportionate testing effortssince combinational side effects grow rapidly and increase risk. Refactoring these classes intosmaller ones not only increases testability and reliability but also allows new variations to bedeveloped easily.
+- **NcssMethodCount:** This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of linesof code for a given method. NCSS ignores comments, and counts actual statements. Using this algorithm,lines of code that are split are counted as one.
+
+- **NcssTypeCount:** This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of linesof code for a given type. NCSS ignores comments, and counts actual statements. Using this algorithm,lines of code that are split are counted as one.
+
+- **NcssConstructorCount:** This rule uses the NCSS (Non-Commenting Source Statements) algorithm to determine the number of linesof code for a given constructor. NCSS ignores comments, and counts actual statements. Using this algorithm,lines of code that are split are counted as one.
 
 - **TooManyFields:** Classes that have too many fields can become unwieldy and could be redesigned to have fewer fields,possibly through grouping related fields in new objects. For example, a class with individual city/state/zip fields could park them within a single Address field.
 
 - **AvoidDeeplyNestedIfStmts:** Avoid creating deeply nested if-then statements since they are harder to read and error-prone to maintain.
 
-- **VariableNamingConventions:** A variable naming conventions rule - customize this to your liking. Currently, it checks for final variables that should be fully capitalized and non-final variables that should not include underscores.
+- **AvoidSoqlInLoops:** New objects created within loops should be checked to see if they can created outside them and reused.
 
-- **MethodNamingConventions:** Method names should always begin with a lower case character, and should not contain underscores.
+- **AvoidLogicInTrigger:** As triggers do not allow methods like regular classes they are less flexible and suited to apply good encapsulation style. Therefore delegate the triggers work to a regular class (often called Trigger handler class). See more here: [Apex Trigger Best Practices](https://developer.salesforce.com/page/Trigger_Frameworks_and_Apex_Trigger_Best_Practices)
+
+- **AvoidGlobalModifier:** Global classes should be avoided (especially in managed packages) as they can never be deleted or changed in signature. Always check twice if something needs to be global.Many interfaces (e.g. Batch) required global modifiers in the past but don’t require this anymore. Don’t look yourself in.
 
 - **ClassNamingConventions:** Class names should always begin with an upper case character.
 
-- **MethodWithSameNameAsEnclosingClass:** Non-constructor methods should not have the same ng conventions indicate a constant. However, the field is not final.
+- **MethodNamingConventions:** Method names should always begin with a lower case character, and should not contain underscores.
 
+- **MethodWithSameNameAsEnclosingClass:** Non-constructor methods should not have the same name as the enclosing class.
 
+- **VariableNamingConventions:** A variable naming conventions rule - customize this to your liking. Currently, it checks for final variables that should be fully capitalized and non-final variables that should not include underscores.
 
 ### <a name="configuration">Enable and configure the Engine</a>
 
