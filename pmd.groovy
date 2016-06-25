@@ -17,11 +17,15 @@ while(i.hasNext()) {
     }
 }
 
-filesToAnalyse = filesToAnalyse.toString()
-filesToAnalyse = filesToAnalyse.substring(1, filesToAnalyse.length()-1).replaceAll("\\s+","")
 if (filesToAnalyse.isEmpty()) {
     System.exit(0)
 }
+
+
+def fileList = File.createTempFile("apexmetrics-filelist-", null, null)
+fileList.deleteOnExit()
+fileList.write filesToAnalyse.join(",\n")
+fileList << "\n"
 
 def ruleset
 def defaultRulesetLocation = "/usr/src/app/apex-ruleset.xml"
@@ -33,7 +37,7 @@ else {
     ruleset = defaultRulesetLocation
 }
 
-def pmdCommand = "/usr/src/app/lib/pmd/bin/run.sh pmd -d ${filesToAnalyse} -f codeclimate -R ${ruleset} -l apex -v 35 -failOnViolation false"
+def pmdCommand = "/usr/src/app/lib/pmd/bin/run.sh pmd -filelist ${fileList} -f codeclimate -R ${ruleset} -l apex -v 35 -failOnViolation false"
 
 ProcessBuilder builder = new ProcessBuilder( pmdCommand.split(' ') )
 
