@@ -50,6 +50,8 @@ ExcessiveClassLength: Excessive class file lengths are usually indications that 
 
 - **VariableNamingConventions:** A variable naming conventions rule - customize this to your liking. Currently, it checks for final variables that should be fully capitalized and non-final variables that should not include underscores.
 
+See here for a more [detailed description of the Apex rules](http://pmd.sourceforge.net/snapshot/pmd-apex/rules/index.html).
+
 ### <a name="configuration">Enable and configure the Engine</a>
 
 Code Climate will not run this engine on your code unless you have this minimal '.codeclimate.yml' (Note the leading dot) in the root directory of your repository. 
