@@ -209,7 +209,7 @@
         <properties>
             <!-- relevant for Code Climate output only -->
             <property name="cc_categories" value="Security"/>
-            <property name="cc_remediation_points_multiplier" value="20"/>
+            <property name="cc_remediation_points_multiplier" value="5"/>
             <property name="cc_block_highlighting" value="false"/>
         </properties>
     </rule>
@@ -219,7 +219,7 @@
         <properties>
             <!-- relevant for Code Climate output only -->
             <property name="cc_categories" value="Security"/>
-            <property name="cc_remediation_points_multiplier" value="10"/>
+            <property name="cc_remediation_points_multiplier" value="50"/>
             <property name="cc_block_highlighting" value="false"/>
         </properties>
      </rule>
@@ -230,7 +230,7 @@
         <properties>
             <!-- relevant for Code Climate output only -->
             <property name="cc_categories" value="Security"/>
-            <property name="cc_remediation_points_multiplier" value="200"/>
+            <property name="cc_remediation_points_multiplier" value="100"/>
             <property name="cc_block_highlighting" value="false"/>
         </properties>
     </rule>
@@ -241,7 +241,7 @@
         <properties>
             <!-- relevant for Code Climate output only -->
             <property name="cc_categories" value="Security"/>
-            <property name="cc_remediation_points_multiplier" value="200"/>
+            <property name="cc_remediation_points_multiplier" value="50"/>
             <property name="cc_block_highlighting" value="false"/>
         </properties>
     </rule>	
@@ -252,7 +252,7 @@
         <properties>
             <!-- relevant for Code Climate output only -->
             <property name="cc_categories" value="Security"/>
-            <property name="cc_remediation_points_multiplier" value="100"/>
+            <property name="cc_remediation_points_multiplier" value="20"/>
             <property name="cc_block_highlighting" value="false"/>
         </properties>
     </rule>	
@@ -263,7 +263,7 @@
         <properties>
             <!-- relevant for Code Climate output only -->
             <property name="cc_categories" value="Security"/>
-            <property name="cc_remediation_points_multiplier" value="200"/>
+            <property name="cc_remediation_points_multiplier" value="20"/>
             <property name="cc_block_highlighting" value="false"/>
         </properties>
     </rule>	
@@ -274,7 +274,7 @@
         <properties>
             <!-- relevant for Code Climate output only -->
             <property name="cc_categories" value="Security"/>
-            <property name="cc_remediation_points_multiplier" value="100"/>
+            <property name="cc_remediation_points_multiplier" value="20"/>
             <property name="cc_block_highlighting" value="false"/>
         </properties>
     </rule>	
@@ -285,7 +285,7 @@
         <properties>
             <!-- relevant for Code Climate output only -->
             <property name="cc_categories" value="Security"/>
-            <property name="cc_remediation_points_multiplier" value="300"/>
+            <property name="cc_remediation_points_multiplier" value="50"/>
             <property name="cc_block_highlighting" value="false"/>
         </properties>
     </rule>	
