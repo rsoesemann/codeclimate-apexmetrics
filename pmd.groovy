@@ -4,7 +4,7 @@ import groovy.util.FileNameFinder
 
 
 def appContext = setupContext(args)
-def includePaths = new JsonSlurper().parse(new File(appContext.configFile), "UTF-8").include_paths?.join(" ")
+def includePaths = new JsonSlurper().parse(new File(appContext.configFile), "UTF-8").include_paths?.join(" ").replace("./", "")
 def codeFolder = new File(appContext.codeFolder)
 
 def filesToAnalyse = new FileNameFinder().getFileNames(appContext.codeFolder, includePaths)
@@ -32,7 +32,7 @@ def defaultRulesetLocation = "/usr/src/app/apex-ruleset.xml"
 def customRulesetLocation = "/code/apex-ruleset.xml"
 if ( new File(customRulesetLocation).exists() ) {
     ruleset = customRulesetLocation
-} 
+}
 else {
     ruleset = defaultRulesetLocation
 }
