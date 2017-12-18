@@ -14,7 +14,7 @@ The engine and [all of](https://github.com/forcedotcom/idecore/tree/b5bf3a1cb6e8
 
 ### <a name="rules">What issues are recognized?</a>
 
-**[List of all 29 PMD rules for Apex..](http://pmd.sourceforge.net/snapshot/pmd-apex/rules/index.html)**
+**[50+ rules for Apex and Visualforce..](https://pmd.github.io/latest/pmd_rules_apex.html)**
 
 ### <a name="configuration">Enable and configure the Engine</a>
 
@@ -28,6 +28,8 @@ ratings:
   paths:
     - "**.cls"
     - "**.trigger"
+    - "**.page"
+    - "**.component"
 ```
 
 For more details about Code Climate configuration go to [docs.codeclimate.com](https://docs.codeclimate.com/docs/configuring-your-code-climate-analysis).
