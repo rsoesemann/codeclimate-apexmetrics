@@ -1,6 +1,6 @@
 FROM java:8-jre
 
-MAINTAINER Up2Go-DavidRenz
+MAINTAINER up2go-rsoesemann
 
 RUN cd /tmp && \
      wget http://dl.bintray.com/groovy/maven/apache-groovy-binary-2.4.6.zip && \ 
