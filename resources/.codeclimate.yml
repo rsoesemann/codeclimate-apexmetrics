@@ -5,14 +5,14 @@ ratings:
   paths:
     - "**.cls"
     - "**.trigger"
+    - "**.component"
+    - "**.page" 
 exclude_paths:
   - "src/documents/"
   - "**.schema"
   - "**.xml"
   - "**.actionLinkGroupTemplate"  
   - "**.snapshot" 
-  - "**.component"
-  - "**.page" 
   - "**.appMenu"
   - "**.approvalProcess"  
   - "**.assignmentRules"
