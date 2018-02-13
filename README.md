@@ -1,3 +1,5 @@
+## DISCONTINUED - This Salesforce-only PMD engine will not be updated anymore. Help make https://github.com/codeclimate/codeclimate-pmd available for all languages. Not Java-only.
+
 ## ApexMetrics - Code Climate engine for Salesforce.com Apex
 
 <img src="https://github.com/Up2Go/codeclimate-apexmetrics/blob/master/resources/ApexMetricsLogo.png" width="150" align="left">
